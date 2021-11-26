@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+   int arr[10]={3,5,7,15,20,34,89,65,43,97};
+   int n=10;
+   int a, b, key , swap;
+   for (a = 0; a < (n - 1); a++) {
+      position = a;
+      for (b = a + 1; b < n; b++) {
+         if (arr[position] > arr[b])
+            position = b;
+      }
+      if (position != a) {
+         swap = arr[a];
+         arr[a] = arr[position];
+         arr[position] = swap;
+      }
+   }
+   for (a = 0; a < n; a++)
+      printf("%d\t", arr[a]);
+   return 0;
+}
